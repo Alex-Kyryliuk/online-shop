@@ -1,0 +1,31 @@
+@font-face {
+	font-family: 'Roboto';
+	src: url('/fonts/Roboto-Thin.eot');
+	src: local('☺'), url('/fonts/Roboto-Thin.woff') format('woff'), url('/fonts/Roboto-Thin.ttf') format('truetype'), url('/fonts/Roboto-Thin.svg') format('svg');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('/fonts/Roboto-Regular.eot');
+	src: local('☺'), url('/fonts/Roboto-Regular.woff') format('woff'), url('/fonts/Roboto-Regular.ttf') format('truetype'), url('/fonts/Roboto-Regular.svg') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('/Roboto-Black.eot');
+	src: local('☺'), url('/fonts/Roboto-Black.woff') format('woff'), url('/fonts/Roboto-Black.ttf') format('truetype'), url('/fonts/Roboto-Black.svg') format('svg');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'WaitingfortheSunrise';
+	src: url('/fonts/WaitingfortheSunrise-Regular.eot');
+	src: local('☺'), url('/fonts/WaitingfortheSunrise-Regular.woff') format('woff'), url('/fonts/WaitingfortheSunrise-Regular.ttf') format('truetype'), url('/fonts/WaitingfortheSunrise-Regular.svg') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
