@@ -20,18 +20,18 @@ footer {
     margin: 0 auto;
 }
 
-#home_banner>a>h1 {
+.container>a>h1 {
     text-align: center;
     font-family: 'Roboto';
     font-weight: 900;
     font-size: 3rem;
     text-transform: uppercase;
     color: #75ded5;
-    padding: 25px 360px 0px;
+    padding: 25px 0px 0px;
     text-shadow: 4px 0px 8px rgba(117, 221, 212, 0.63);
 }
 
-nav {
+nav>.container {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -52,10 +52,10 @@ nav {
     margin: 15px -91px 15px 78px;
 }
 
-.navigation .left>li>a,
-.navigation .right>li>a,
-.navigation .menu_left>li>a,
-.navigation .menu_right>li>a {
+.left>li>a,
+.right>li>a,
+.menu_left>li>a,
+.menu_right>li>a {
     cursor: pointer;
     color: #000;
     transform: translate3d(-50%, -50%, 0);
@@ -155,11 +155,11 @@ li>a:active .line.-bottom {
     transform-origin: left;
 }
 
-.navigation>ul.right>li {
+ul.right>li {
     transition: 0.3s;
 }
 
-.navigation>ul.right>li:hover {
+ul.right>li:hover {
     transform: scale(1.3);
 }
 
@@ -167,17 +167,18 @@ a>img {
     width: 18px;
 }
 
-.navigation>ul.menu_left,
-.navigation>ul.menu_right,
-.navigation>ul.left,
-.navigation>ul.right {
+ul.menu_left,
+ul.menu_right,
+ul.left,
+ul.right {
     display: flex;
     justify-content: space-between;
     font-size: 0.8rem;
 }
 
-main>article>img {
-    width: 100%;
+article>img {
+    max-width: 100%;
+    min-width: 100%;
 
 }
 
@@ -196,7 +197,7 @@ main>article>img {
 }
 
 .products_grid>.products>.products-top>img {
-    width: 388px;
+    width: 376px;
     height: 515px;
 }
 
@@ -410,4 +411,147 @@ address {
 
 .creator {
     font-family: 'WaitingfortheSunrise';
+}
+
+
+/* Responsive */
+
+#menu__toggle {}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+
+    #menu__toggle {
+        opacity: 0;
+    }
+
+    #menu__toggle:checked~.menu__btn>span {
+        transform: rotate(45deg);
+    }
+
+    #menu__toggle:checked~.menu__btn>span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+
+    #menu__toggle:checked~.menu__btn>span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    #menu__toggle:checked~.left,
+    #menu__toggle:checked~.right,
+    #menu__toggle:checked~.menu_left,
+    #menu__toggle:checked~.menu_right {
+        visibility: visible;
+        left: 0;
+    }
+
+    .menu__btn {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+
+        width: 26px;
+        height: 26px;
+
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .menu__btn>span,
+    .menu__btn>span::before,
+    .menu__btn>span::after {
+        display: block;
+        position: absolute;
+
+        width: 100%;
+        height: 2px;
+
+        background-color: #616161;
+
+        transition-duration: .25s;
+    }
+
+    .menu__btn>span::before {
+        content: '';
+        top: -8px;
+    }
+
+    .menu__btn>span::after {
+        content: '';
+        top: 8px;
+    }
+
+    .left,
+    .right,
+    .menu_left,
+    .menu_right {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        left: -100%;
+
+        width: 100%;
+        height: 100%;
+
+        margin: 0;
+        padding: 80px 0;
+
+        list-style: none;
+
+        background-color: #ECEFF1;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+
+        transition-duration: .25s;
+    }
+
+    .menu__item {
+        display: block;
+        padding: 12px 24px;
+
+        color: #333;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+
+        text-decoration: none;
+
+        transition-duration: .25s;
+    }
+
+    .menu__item:hover {
+        background-color: #CFD8DC;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .container {
+        width: 960px;
+    }
+
+}
+
+@media screen and (max-width: 991px) {
+    .container {
+        width: 720px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        width: 540px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .container {
+        width: 100%;
+    }
 }
